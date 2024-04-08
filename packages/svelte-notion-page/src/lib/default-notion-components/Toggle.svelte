@@ -11,6 +11,7 @@
 
 <div
 	class:notion-toggle-open={open}
+	aria-expanded={open}
 	class={`${getColorCss(color)} notion-block notion-h1 notion-toggle`}
 >
 	<div class="notion-toggle-content">

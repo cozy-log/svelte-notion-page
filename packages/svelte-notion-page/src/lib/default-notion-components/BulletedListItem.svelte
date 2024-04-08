@@ -12,26 +12,30 @@
 	const { marker } = bulletedListItemMarker.getMarker(props);
 </script>
 
-<div class={`notion-block notion-list-bulleted ${getColorCss(color)}`}>
-	<li class="notion-list-bulleted-content">
-		<span class="notion-list-marker">{marker}</span>
-		<p>
-			<RichText props={texts} />
-		</p>
+<ul class={`notion-block notion-list-bulleted ${getColorCss(color)}`}>
+	<li class="notion-display-contents">
+		<div class="notion-list-bulleted-content">
+			<span class="notion-list-marker">{marker}</span>
+			<p>
+				<RichText props={texts} />
+			</p>
+		</div>
+		<slot />
 	</li>
-	<slot />
-</div>
+</ul>
 
 <style>
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
 	.notion-list-bulleted-content {
-		display: flex;
-		align-items: start;
 		padding-left: 2px;
 		padding-top: 3px;
 		padding-bottom: 3px;
-		list-style-type: none;
+		display: flex;
+		align-items: flex-start;
 	}
-
 	.notion-list-marker {
 		user-select: none;
 		width: 24px;

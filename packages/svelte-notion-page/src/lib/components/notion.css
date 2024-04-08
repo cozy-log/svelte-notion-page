@@ -1,5 +1,7 @@
 .notion * {
 	box-sizing: border-box;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .notion {
@@ -15,9 +17,11 @@
 	--notion-indent: 27px;
 }
 
-.notion * {
-	margin-block-start: 0;
-	margin-block-end: 0;
+.notion figure {
+	padding: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	unicode-bidi: isolate;
 }
 
 .notion *::selection {
@@ -37,7 +41,15 @@
 	margin-top: 2px;
 }
 
+.notion-display-contents {
+	display: contents;
+}
+
 .notion-block > .notion-block {
+	margin-left: var(--notion-indent);
+}
+
+.notion-block > .notion-display-contents > .notion-block {
 	margin-left: var(--notion-indent);
 }
 
@@ -55,11 +67,10 @@
 }
 
 .notion-toggle-button {
-	display: inline-block;
 	width: 22px;
 	height: 24px;
 	box-sizing: border-box;
-	display: flex;
+	display: inline-flex;
 	border-radius: 3px;
 	border: none;
 	margin-left: 2px;

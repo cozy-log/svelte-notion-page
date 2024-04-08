@@ -20,7 +20,7 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		margin-block-start: 0;
-		margin-end-start: 0;
+		margin-block-end: 0;
 	}
 
 	.notion-paragraph-content {

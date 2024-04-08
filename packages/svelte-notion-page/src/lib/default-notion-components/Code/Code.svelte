@@ -56,7 +56,7 @@
 	};
 </script>
 
-<div class="notion-block notion-code">
+<figure class="notion-block notion-code">
 	<div class="notion-code-content">
 		<div class="notion-code-meta">
 			<div class="notion-code-language">
@@ -86,9 +86,9 @@
 		</code>
 	</div>
 	{#if caption.length !== 0}
-		<div class="notion-asset-caption">
+		<figcaption class="notion-asset-caption">
 			<RichText props={caption} />
-		</div>
+		</figcaption>
 	{/if}
 
 	{#if copied}
@@ -96,7 +96,7 @@
 			<div>{'Copied'}</div>
 		</div>
 	{/if}
-</div>
+</figure>
 
 <style>
 	.notion-code {

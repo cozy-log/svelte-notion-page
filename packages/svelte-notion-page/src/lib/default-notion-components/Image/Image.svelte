@@ -3,7 +3,7 @@
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
-	export let style = ''
+	export let style = '';
 	export let props: ImageArgs;
 	const { image } = props;
 	const { type, caption } = image;
@@ -54,7 +54,7 @@
 	}
 </script>
 
-<div style={style} class="notion-block notion-image">
+<figure {style} class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
 			<ImageViewer bind:opened {initialIndex} {urls} />
@@ -63,11 +63,11 @@
 		{/if}
 	</div>
 	{#if caption.length !== 0}
-		<div class="notion-asset-caption">
+		<figcaption class="notion-asset-caption">
 			<RichText props={caption} />
-		</div>
+		</figcaption>
 	{/if}
-</div>
+</figure>
 
 <style>
 	.notion-image:not(:last-child) {

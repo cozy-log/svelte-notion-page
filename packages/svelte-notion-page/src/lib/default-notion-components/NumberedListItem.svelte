@@ -11,25 +11,36 @@
 	const { marker, format } = numberedListItemMarker.getMarker(props);
 </script>
 
-<div
+<ol
 	data-notion-marker-format={format}
 	class={`notion-block notion-list-numbered ${getColorCss(color)}`}
 >
-	<li class="notion-list-numbered-content">
-		<div class="notion-list-marker">{marker}</div>
-		<p>
-			<RichText props={texts} />
-		</p>
+	<li class="notion-display-contents">
+		<div class="notion-list-numbered-content">
+			<span data-notion-marker-format={format} class="notion-list-marker">{marker}</span>
+			<p>
+				<RichText props={texts} />
+			</p>
+		</div>
+		<slot />
 	</li>
-	<slot />
-</div>
+</ol>
 
 <style>
-	:global(.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-list-marker) {
+	ol {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	:global(
+			.notion-list-numbered[data-notion-marker-format='romans']
+				> .notion-display-contents
+				> .notion-list-numbered-content
+				> .notion-list-marker
+		) {
 		width: 3em !important;
 		margin-right: 0em;
 	}
-	:global(.notion-list-numbered[data-notion-marker-format='romans'] > .notion-block) {
+	:global(.notion-list-numbered[data-notion-marker-format='romans'] > li > .notion-block) {
 		margin-left: 2.9em;
 	}
 
@@ -37,7 +48,7 @@
 		content: '.';
 	}
 
-	li > .notion-list-marker {
+	.notion-list-marker {
 		width: 26px;
 	}
 
@@ -52,7 +63,6 @@
 	.notion-list-numbered-content {
 		padding-top: 4px;
 		padding-bottom: 4px;
-		list-style-type: none;
 		display: flex;
 	}
 </style>
