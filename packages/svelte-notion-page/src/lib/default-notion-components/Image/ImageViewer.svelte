@@ -173,23 +173,21 @@
 
 <svelte:window on:keydown={handleKeyDownOnOpened} />
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="notion-viewer-opener" on:click={() => (opened = true)}>
-	<img src={urls[initialIndex]} alt="posting img" />
-</div>
+<button aria-haspopup="dialog" class="notion-viewer-opener" on:click={() => (opened = true)}>
+	<slot />
+</button>
 
 {#if opened}
-	<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 	<div
-		tabindex="0"
+		role="dialog"
+		aria-modal="true"
 		on:mousemove={handleHideCursorOnMouseStop}
 		use:focusAction={opened}
-		transition:fade|global={{ duration: 200 }}
+		transition:fade={{ duration: 200 }}
 		class:hide-cursor={!cursorVisible}
 		class="notion-viewer-container"
 	>
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<div on:click={() => (opened = false)} class="notion-viewer-overlay" />
+		<button on:click={() => (opened = false)} class="notion-viewer-overlay" />
 		{#key url}
 			<img
 				use:zoomInOutActionOnClick
@@ -209,12 +207,14 @@
 						pointer: false,
 						placement: 'left'
 					}}
+					aria-label="previous"
 					on:click={toPreviousImage}
 					class:disabled={!hasPrevious}
 				>
 					<img src={Icon.ArrowBack} alt="arrow_back" />
 				</button>
 				<button
+					aria-label="next"
 					use:tooltipAction={{
 						content: '다음',
 						pointer: false,
@@ -229,6 +229,7 @@
 			<div class="scaler">
 				<button
 					use:tooltipAction={{ content: '축소 -', placement: 'left' }}
+					aria-label="scale-down"
 					class:disabled={scale <= 0.5}
 					on:click={scaleDown}
 				>
@@ -257,6 +258,7 @@
 					</button>
 				{/if}
 				<button
+					aria-label="scale-up"
 					use:tooltipAction={{ content: '확대 +', placement: 'left', pointer: false }}
 					class:disabled={scale >= 2}
 					on:click={scaleUp}
@@ -267,11 +269,13 @@
 			<button
 				use:tooltipAction={{ content: '다운로드', placement: 'left', pointer: false }}
 				class="download"
+				aria-label="download"
 				on:click={handleDownloadLoading}
 			>
 				<img src={Icon.Download} alt="download" />
 			</button>
 			<button
+				aria-label="close"
 				use:tooltipAction={{ content: '닫기 esc', placement: 'left', pointer: false }}
 				class="close"
 				on:click={() => (opened = false)}
@@ -361,11 +365,13 @@
 	input::-webkit-outer-spin-button,
 	input::-webkit-inner-spin-button {
 		-webkit-appearance: none;
+		appearance: none;
 		margin: 0;
 	}
 	/* Firefox */
 	input[type='number'] {
 		-moz-appearance: textfield;
+		appearance: textfield;
 	}
 	.tools .scaler > button:first-of-type {
 		border-top-right-radius: 0;
@@ -390,7 +396,7 @@
 		border-top-right-radius: 6px;
 		border-bottom-right-radius: 6px;
 	}
-	button:not(:disabled) {
+	.tools button:not(:disabled) {
 		cursor: pointer;
 	}
 	.hide-cursor {
@@ -428,6 +434,7 @@
 		overflow: hidden;
 		background-color: black;
 		opacity: 0.8;
+		cursor: default;
 	}
 
 	.notion-viewer-container > img {
@@ -443,10 +450,6 @@
 	}
 
 	.notion-viewer-opener > img {
-		width: 100%;
-		object-fit: contain;
-		pointer-events: auto;
-		cursor: default;
 	}
 
 	.tools {
@@ -455,5 +458,23 @@
 		bottom: 32px;
 		left: 50%;
 		transform: translateX(-50%);
+	}
+
+	button {
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: auto;
+		height: auto;
+		overflow: visible;
+		text-align: left;
+		color: inherit;
+		font: inherit;
+		line-height: normal;
+		-webkit-font-smoothing: inherit;
+		-moz-osx-font-smoothing: inherit;
+		-webkit-appearance: none;
+		appearance: none;
 	}
 </style>

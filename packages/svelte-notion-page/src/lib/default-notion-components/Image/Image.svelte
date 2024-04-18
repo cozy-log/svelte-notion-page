@@ -57,7 +57,11 @@
 <figure {style} class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
-			<ImageViewer bind:opened {initialIndex} {urls} />
+			<ImageViewer bind:opened {initialIndex} {urls}>
+				<slot>
+					<img src={url} alt="posting img" />
+				</slot>
+			</ImageViewer>
 		{:else}
 			unsupported type: ${type}
 		{/if}
@@ -70,6 +74,13 @@
 </figure>
 
 <style>
+	.notion-image img {
+		width: 100%;
+		object-fit: contain;
+		pointer-events: auto;
+		cursor: default;
+	}
+
 	.notion-image:not(:last-child) {
 		margin-bottom: 4px;
 	}
