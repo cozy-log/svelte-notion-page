@@ -32,39 +32,3 @@
 	<slot />
 </div>
 
-<style>
-	.notion-callout {
-		padding: 16px 16px 16px 12px;
-		margin-top: 4px;
-		margin-bottom: 4px;
-		border-radius: 3px;
-	}
-
-	.notion-callout-outline {
-		border: 1px solid var(--fg-color-0);
-	}
-
-	.notion-callout-content {
-		display: flex;
-	}
-
-	:global(.notion-block + .notion-callout > .notion-block) {
-		margin-left: calc(var(--notion-indent) + 12px);
-	}
-
-	.notion-callout .notion-page-icon-inline {
-		align-self: flex-start;
-		width: 24px;
-		height: 24px;
-		line-height: 24px;
-		font-size: 1.3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.notion-callout-text {
-		margin-left: 8px;
-		word-break: break-word;
-	}
-</style>
