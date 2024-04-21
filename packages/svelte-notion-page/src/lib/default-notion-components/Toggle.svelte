@@ -24,9 +24,3 @@
 	</div>
 	<slot />
 </div>
-
-<style>
-	.notion-toggle-content > p {
-		padding: 3px 2px;
-	}
-</style>

@@ -42,22 +42,4 @@
 </div>
 
 <style>
-	.notion-video:not(:last-child) {
-		margin-bottom: 4px;
-	}
-
-	.notion-video:not(:first-child) {
-		margin-top: 4px;
-	}
-
-	.notion-video-content {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.notion-video-content video {
-		width: 100%;
-		border-radius: 2px;
-		margin: 0 auto;
-	}
 </style>

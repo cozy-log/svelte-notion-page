@@ -781,7 +781,6 @@
 		margin-left: 0px;
 	}
 
-
 	.notion-table-content {
 		width: 100%;
 		overflow-x: visible;
@@ -805,4 +804,57 @@
 
 	.notion-table:not(:last-child) {
 		margin-bottom: 4px;
+	}
+
+	.notion-table-row td {
+		border: 1px solid var(--fg-color-5);
+		width: 120px;
+		min-width: 120px;
+		padding: 7px 9px;
+		white-space: pre-wrap;
+		word-break: break-word;
+		font-size: 14px;
+		line-height: 20px;
+		caret-color: rgb(55, 53, 47);
+	}
+
+	.notion-to-do-content {
+		display: flex;
+	}
+
+	.notion-to-do-checkbox {
+		display: inline-block;
+		padding: 8px 6px;
+	}
+
+	.notion-to-do-text {
+		padding: 3px 2px;
+	}
+
+	.notion-to-do-checked .notion-to-do-text {
+		text-decoration: line-through;
+		opacity: 0.6;
+	}
+
+	.notion-toggle-content > p {
+		padding: 3px 2px;
+	}
+
+	.notion .notion-video:not(:last-child) {
+		margin-bottom: 4px;
+	}
+
+	.notion .notion-video:not(:first-child) {
+		margin-top: 4px;
+	}
+
+	.notion-video-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.notion-video-content video {
+		width: 100%;
+		border-radius: 2px;
+		margin: 0 auto;
 	}
