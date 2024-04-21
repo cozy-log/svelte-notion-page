@@ -449,9 +449,6 @@
 		user-select: none;
 	}
 
-	.notion-viewer-opener > img {
-	}
-
 	.tools {
 		display: flex;
 		position: absolute;
