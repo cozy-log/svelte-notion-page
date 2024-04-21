@@ -17,28 +17,4 @@
 </table>
 
 <style>
-	.notion-table-content {
-		width: 100%;
-		overflow-x: visible;
-		border-collapse: collapse;
-		border-spacing: 0;
-		font-size: 14px;
-		padding-bottom: 12px;
-	}
-
-	:global(.notion-table-content.has-column-header tr:first-child td) {
-		background: var(--bg-color-1);
-	}
-
-	:global(.notion-table-content.has-row-header tr td:first-child) {
-		background: var(--bg-color-1);
-	}
-
-	.notion-table:not(:first-child) {
-		margin-top: 8px;
-	}
-
-	.notion-table:not(:last-child) {
-		margin-bottom: 4px;
-	}
 </style>

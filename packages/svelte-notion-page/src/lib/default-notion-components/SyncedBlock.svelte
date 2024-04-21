@@ -8,7 +8,4 @@
 </div>
 
 <style>
-	:global(.notion-block.notion-synced-block > .notion-block) {
-		margin-left: 0px;
-	}
 </style>

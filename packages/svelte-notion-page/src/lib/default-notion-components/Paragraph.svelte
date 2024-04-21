@@ -8,7 +8,7 @@
 	} = props;
 </script>
 
-<div class={`notion-block ${getColorCss(color)}`}>
+<div class={`notion-block notion-paragraph ${getColorCss(color)}`}>
 	<p class="notion-paragraph-content">
 		<RichText props={texts} />
 	</p>
@@ -16,14 +16,4 @@
 </div>
 
 <style>
-	.notion-paragraph {
-		margin-top: 0;
-		margin-bottom: 0;
-		margin-block-start: 0;
-		margin-block-end: 0;
-	}
-
-	.notion-paragraph-content {
-		padding: 3px 2px;
-	}
 </style>

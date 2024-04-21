@@ -1,18 +1,18 @@
 npm WARN ignoring workspace config at /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/.npmrc 
 
 > @cozy-blog/svelte-notion-page@0.0.26 build-storybook
-> storybook build --output-dir /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X
+> storybook build --output-dir /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u
 
 @storybook/cli v7.0.0-rc.3
 
-info => Cleaning outputDir: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X
-(node:91377) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+info => Cleaning outputDir: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u
+(node:270) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 info => Loading presets
 info => Building manager..
-info => Manager built (110 ms)
-info => Copying static files: /Users/daeseungmoon/work/svelte-notion-page/node_modules/@storybook/manager/static at /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/sb-common-assets
-2:37:07 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+info => Manager built (128 ms)
+info => Copying static files: /Users/daeseungmoon/work/svelte-notion-page/node_modules/@storybook/manager/static at /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/sb-common-assets
+2:46:00 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
@@ -25,134 +25,121 @@ transforming...
 Browserslist: caniuse-lite is outdated. Please run:
   npx update-browserslist-db@latest
   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-2:37:13 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/Heading3.svelte:34:1 Unused CSS selector "summary::marker"
-32: 
-33: <style>
-34:   summary::marker {
-      ^
-35:     font-size: 1rem;
-36:   }
-2:37:13 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/Code/Code.svelte:183:1 Unused CSS selector ".notion-code-copy-button svg"
+2:46:06 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/Code/Code.svelte:183:1 Unused CSS selector ".notion-code-copy-button svg"
 181:   }
 182: 
 183:   .notion-code-copy-button svg {
        ^
 184:     display: block;
 185:     height: 14px;
-2:37:13 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/SyncedBlock.svelte:1:29 SyncedBlock has unused export property 'props'. If it is for external reference only, please consider using `export const props`
+2:46:06 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/SyncedBlock.svelte:1:29 SyncedBlock has unused export property 'props'. If it is for external reference only, please consider using `export const props`
 1: <script lang="ts">export let props;
                                 ^
 2: </script>
 3: 
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-youtube-embed@0.1.8
 svelte-katex@0.1.2
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
-
-svelte-katex@0.1.2
-svelte-youtube-embed@0.1.8
-
-Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-youtube-embed@0.1.8
 svelte-katex@0.1.2
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
 
 svelte-katex@0.1.2
 svelte-youtube-embed@0.1.8
 
 Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
-2:37:13 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/Image/ImageViewer.svelte:447:1 Unused CSS selector ".notion-viewer-opener > img"
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-katex@0.1.2
+svelte-youtube-embed@0.1.8
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-youtube-embed@0.1.8
+svelte-katex@0.1.2
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-youtube-embed@0.1.8
+svelte-katex@0.1.2
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-katex@0.1.2
+svelte-youtube-embed@0.1.8
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-katex@0.1.2
+svelte-youtube-embed@0.1.8
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-katex@0.1.2
+svelte-youtube-embed@0.1.8
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+2:46:06 PM [vite-plugin-svelte] /Users/daeseungmoon/work/svelte-notion-page/packages/svelte-notion-page/src/lib/default-notion-components/Image/ImageViewer.svelte:447:1 Unused CSS selector ".notion-viewer-opener > img"
 445:   }
 446: 
 447:   .notion-viewer-opener > img {
@@ -161,82 +148,82 @@ Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#
 449: 
 Use of eval in "../../node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
 Use of eval in "../../node_modules/telejson/dist/index.mjs" is strongly discouraged as it poses security risks and may cause issues with minification.
-✓ 794 modules transformed.
+✓ 792 modules transformed.
 rendering chunks...
 computing gzip size...
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/minus-0b1556bd.svg                               0.17 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/info-67485b8b.svg                                0.47 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/cross-42442b15.svg                               0.57 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/arrow_forward-104b9bc0.svg                       0.72 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/arrow_back-09195097.svg                          0.72 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/download-22ea4814.svg                            0.76 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/plus-b4424ae5.svg                                0.81 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/success-e8e52ddb.svg                             0.93 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/error-30b3866a.svg                               1.05 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/close-b006d55f.svg                               1.12 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/warn-52ac6d02.svg                                1.32 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/iframe.html                                            13.08 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/reasons_to_live-3783a207.jpeg                   39.21 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/frog-31cd626c.jpeg                             122.61 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/uglychart-6c93afd6.png                       1,762.51 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-bb9fe70c.css                              26.01 kB │ gzip:   5.65 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-d475d2ea.js                                0.21 kB │ gzip:   0.16 kB │ map:     0.83 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/_commonjsHelpers-725317a4.js                     0.29 kB │ gzip:   0.23 kB │ map:     0.11 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/chunk-R4NKYYJA-96bb58e6.js                       0.30 kB │ gzip:   0.23 kB │ map:     0.81 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-b46f2f50.js                              0.40 kB │ gzip:   0.27 kB │ map:     1.13 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/WithTooltip-5WWCYCAA-7a9605d3.js                 0.41 kB │ gzip:   0.27 kB │ map:     0.11 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/DocsRenderer-7FRJXR4N-c23e44ad.js                0.42 kB │ gzip:   0.28 kB │ map:     0.11 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/syntaxhighlighter-QTQ2UBB4-a7220927.js           0.42 kB │ gzip:   0.29 kB │ map:     0.12 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-2ce10c26.js                                0.44 kB │ gzip:   0.28 kB │ map:     0.10 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-b0e245c4.js                                0.54 kB │ gzip:   0.35 kB │ map:     4.29 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-9d991090.js                              0.57 kB │ gzip:   0.36 kB │ map:     0.58 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-5dc40fa2.js                              0.69 kB │ gzip:   0.49 kB │ map:     3.78 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-356e4a49.js                                0.81 kB │ gzip:   0.51 kB │ map:     3.26 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-b1164a2e.js                              0.88 kB │ gzip:   0.58 kB │ map:     2.82 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/jsx-runtime-fd768b92.js                          1.02 kB │ gzip:   0.64 kB │ map:     2.30 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Introduction-6e7a8733.js                         1.45 kB │ gzip:   0.74 kB │ map:     2.11 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-16cbdbf3.js                              2.38 kB │ gzip:   1.27 kB │ map:    10.28 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-02182706.js                                2.63 kB │ gzip:   1.30 kB │ map:     7.47 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example-076b73e5.js                              2.77 kB │ gzip:   1.21 kB │ map:     4.28 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-f96f0111.js                              3.29 kB │ gzip:   1.41 kB │ map:    10.10 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/entry-preview-docs-c4339323.js                   3.64 kB │ gzip:   1.77 kB │ map:    25.25 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-03ea9855.js                      4.72 kB │ gzip:   1.63 kB │ map:     8.85 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-b3f94ac1.js                      5.02 kB │ gzip:   1.79 kB │ map:     8.97 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-504683a8.js                      5.33 kB │ gzip:   1.81 kB │ map:    10.37 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-6b6ebff5.js                      6.98 kB │ gzip:   2.00 kB │ map:    13.43 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-7548e66a.js                      7.38 kB │ gzip:   2.02 kB │ map:    14.24 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-f82c8885.js                      7.46 kB │ gzip:   2.04 kB │ map:    15.22 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-62235626.js                              7.69 kB │ gzip:   1.59 kB │ map:    13.71 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/entry-preview-8ffed5ef.js                        7.81 kB │ gzip:   2.68 kB │ map:    11.76 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-e6f1f377.js                              7.97 kB │ gzip:   3.04 kB │ map:    28.19 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/iframe-1ab46840.js                               9.73 kB │ gzip:   2.10 kB │ map:    10.06 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Introduction.stories-16008630.js                 9.96 kB │ gzip:   2.27 kB │ map:    24.34 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/GlobalScrollAreaStyles-XIHNDKUY-e226e904.js     10.38 kB │ gzip:   2.35 kB │ map:    15.71 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-7365ebb3.js                     10.89 kB │ gzip:   2.30 kB │ map:    24.27 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-be7c347d.js                     11.28 kB │ gzip:   2.76 kB │ map:    22.35 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-29eb3083.js                     11.82 kB │ gzip:   2.84 kB │ map:    24.64 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-404b6133.js                     12.14 kB │ gzip:   2.51 kB │ map:    29.23 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-86fee04e.js                               13.52 kB │ gzip:   5.64 kB │ map:   110.96 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-e46d5240.js                     13.67 kB │ gzip:   2.30 kB │ map:    33.40 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-1cc9c492.js                     14.01 kB │ gzip:   2.55 kB │ map:    38.35 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-3aaf88a4.js                     14.36 kB │ gzip:   2.66 kB │ map:    34.74 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-7a2e8904.js                     14.44 kB │ gzip:   2.51 kB │ map:    35.58 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-a3aeb5d1.js                     14.79 kB │ gzip:   2.55 kB │ map:    36.21 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-70f0bd0c.js                     15.32 kB │ gzip:   2.63 kB │ map:    39.13 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-35da6cbe.js                     15.59 kB │ gzip:   3.01 kB │ map:    34.88 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-e6afa9b0.js                     19.66 kB │ gzip:   5.87 kB │ map:    36.77 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/preview-4372e0bb.js                             21.08 kB │ gzip:   7.02 kB │ map:    67.99 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Color-3YIJY6X7-a8f997a4.js                      30.96 kB │ gzip:  11.74 kB │ map:   112.53 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/Example.stories-31398d59.js                     54.74 kB │ gzip:   7.32 kB │ map:   130.92 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/OverlayScrollbars-VAV6LJAB-67a2e4be.js          58.95 kB │ gzip:  25.44 kB │ map:   277.32 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/doctrine-46aa0d0a.js                            63.73 kB │ gzip:  18.20 kB │ map:   240.40 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/index-8842608e.js                              456.53 kB │ gzip: 148.48 kB │ map: 1,433.56 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/formatter-MGIGMU7Y-e2b5405f.js                 601.49 kB │ gzip: 186.22 kB │ map: 1,315.78 kB
-../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X/assets/chunk-PCJTTTQV-dfdf4fbf.js                     651.16 kB │ gzip: 215.44 kB │ map: 1,845.68 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/minus-0b1556bd.svg                               0.17 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/info-67485b8b.svg                                0.47 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/cross-42442b15.svg                               0.57 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/arrow_forward-104b9bc0.svg                       0.72 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/arrow_back-09195097.svg                          0.72 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/download-22ea4814.svg                            0.76 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/plus-b4424ae5.svg                                0.81 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/success-e8e52ddb.svg                             0.93 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/error-30b3866a.svg                               1.05 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/close-b006d55f.svg                               1.12 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/warn-52ac6d02.svg                                1.32 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/iframe.html                                            13.08 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/reasons_to_live-3783a207.jpeg                   39.21 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/frog-31cd626c.jpeg                             122.61 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/uglychart-6c93afd6.png                       1,762.51 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-66de1a48.css                              25.98 kB │ gzip:   5.63 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-d475d2ea.js                                0.21 kB │ gzip:   0.16 kB │ map:     0.83 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/_commonjsHelpers-725317a4.js                     0.29 kB │ gzip:   0.23 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/chunk-R4NKYYJA-96bb58e6.js                       0.30 kB │ gzip:   0.23 kB │ map:     0.81 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-b46f2f50.js                              0.40 kB │ gzip:   0.27 kB │ map:     1.13 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/WithTooltip-5WWCYCAA-70366f5c.js                 0.41 kB │ gzip:   0.27 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/DocsRenderer-7FRJXR4N-8b155d43.js                0.42 kB │ gzip:   0.28 kB │ map:     0.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/syntaxhighlighter-QTQ2UBB4-8efb10c3.js           0.42 kB │ gzip:   0.29 kB │ map:     0.12 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-79d0d0d0.js                                0.44 kB │ gzip:   0.29 kB │ map:     0.10 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-0a5272d0.js                                0.54 kB │ gzip:   0.35 kB │ map:     4.29 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-9febbbbd.js                              0.57 kB │ gzip:   0.36 kB │ map:     0.58 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-5dc40fa2.js                              0.69 kB │ gzip:   0.49 kB │ map:     3.78 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-356e4a49.js                                0.81 kB │ gzip:   0.51 kB │ map:     3.26 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-b1164a2e.js                              0.88 kB │ gzip:   0.58 kB │ map:     2.82 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/jsx-runtime-2ae869a1.js                          1.02 kB │ gzip:   0.65 kB │ map:     2.30 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Introduction-aa8dbdff.js                         1.45 kB │ gzip:   0.74 kB │ map:     2.11 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-16cbdbf3.js                              2.38 kB │ gzip:   1.27 kB │ map:    10.28 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-02182706.js                                2.63 kB │ gzip:   1.30 kB │ map:     7.47 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example-05b0ccc9.js                              2.77 kB │ gzip:   1.21 kB │ map:     4.28 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-f96f0111.js                              3.29 kB │ gzip:   1.41 kB │ map:    10.10 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/entry-preview-docs-c4339323.js                   3.64 kB │ gzip:   1.77 kB │ map:    25.25 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-12dc5e5e.js                      4.72 kB │ gzip:   1.63 kB │ map:     8.85 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-802cbe8d.js                      5.02 kB │ gzip:   1.79 kB │ map:     8.97 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-fb9bac29.js                      5.33 kB │ gzip:   1.81 kB │ map:    10.37 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-d47df102.js                      6.98 kB │ gzip:   2.00 kB │ map:    13.43 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-c36514eb.js                      7.38 kB │ gzip:   2.02 kB │ map:    14.24 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-5bc9ef26.js                      7.46 kB │ gzip:   2.04 kB │ map:    15.22 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-62235626.js                              7.69 kB │ gzip:   1.59 kB │ map:    13.71 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/entry-preview-8ffed5ef.js                        7.81 kB │ gzip:   2.68 kB │ map:    11.76 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-e6f1f377.js                              7.97 kB │ gzip:   3.04 kB │ map:    28.19 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/iframe-44d1f07c.js                               9.73 kB │ gzip:   2.10 kB │ map:    10.06 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Introduction.stories-a65ac695.js                 9.96 kB │ gzip:   2.27 kB │ map:    24.34 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/GlobalScrollAreaStyles-XIHNDKUY-e31ce89a.js     10.38 kB │ gzip:   2.35 kB │ map:    15.71 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-86f016cf.js                     10.89 kB │ gzip:   2.30 kB │ map:    24.27 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-7569bd6e.js                     11.28 kB │ gzip:   2.76 kB │ map:    22.35 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-f2a204e3.js                     11.82 kB │ gzip:   2.84 kB │ map:    24.64 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-9eb63b16.js                     12.14 kB │ gzip:   2.51 kB │ map:    29.23 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-86fee04e.js                               13.52 kB │ gzip:   5.64 kB │ map:   110.96 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-d2d77b4c.js                     13.67 kB │ gzip:   2.30 kB │ map:    33.40 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-3c2f1be7.js                     14.01 kB │ gzip:   2.55 kB │ map:    38.35 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-8e46dc6a.js                     14.36 kB │ gzip:   2.66 kB │ map:    34.74 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-fd203599.js                     14.44 kB │ gzip:   2.51 kB │ map:    35.58 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-442364eb.js                     14.79 kB │ gzip:   2.56 kB │ map:    36.21 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-bf1eb5bf.js                     15.32 kB │ gzip:   2.63 kB │ map:    39.13 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-4281d39a.js                     15.59 kB │ gzip:   3.01 kB │ map:    34.88 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-e3eddb4a.js                     19.66 kB │ gzip:   5.87 kB │ map:    36.77 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/preview-4372e0bb.js                             21.08 kB │ gzip:   7.02 kB │ map:    67.99 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Color-3YIJY6X7-5d973871.js                      30.96 kB │ gzip:  11.74 kB │ map:   112.53 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/Example.stories-32fb0d69.js                     54.74 kB │ gzip:   7.32 kB │ map:   130.92 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/OverlayScrollbars-VAV6LJAB-bd60ae24.js          58.95 kB │ gzip:  25.44 kB │ map:   277.32 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/doctrine-46aa0d0a.js                            63.73 kB │ gzip:  18.20 kB │ map:   240.40 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/index-c60b746c.js                              456.43 kB │ gzip: 148.44 kB │ map: 1,432.97 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/formatter-MGIGMU7Y-66406aef.js                 601.49 kB │ gzip: 186.22 kB │ map: 1,315.78 kB
+../../../../../../var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u/assets/chunk-PCJTTTQV-69bb26c9.js                     651.16 kB │ gzip: 215.44 kB │ map: 1,845.68 kB
 
 (!) Some chunks are larger than 500 kBs after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 9.30s
-info => Output directory: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--91061-YazeFu3d764X
+✓ built in 9.18s
+info => Output directory: /var/folders/1x/8yjjyfvx5fngxx7tjs46t5r00000gn/T/chromatic--99793-mipo01YLvH3u
