@@ -35,19 +35,4 @@
 </div>
 
 <style>
-	summary::marker {
-		font-size: 1rem;
-	}
-
-	.notion-h3:not(:last-child) {
-		margin-bottom: 2px;
-	}
-
-	.notion-h3:not(:first-child) {
-		margin-top: 1.25rem;
-	}
-
-	.notion-h3-content {
-		font-size: 1.25rem;
-	}
 </style>

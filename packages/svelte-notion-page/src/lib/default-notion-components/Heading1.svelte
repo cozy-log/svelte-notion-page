@@ -33,21 +33,3 @@
 		</h1>
 	{/if}
 </div>
-
-<style>
-	.notion-toggle-h1 {
-		margin-bottom: 2px;
-	}
-
-	.notion-h1:not(:last-child) {
-		margin-bottom: 2px;
-	}
-
-	.notion-h1:not(:first-child) {
-		margin-top: 2.025rem;
-	}
-
-	.notion-h1-content {
-		font-size: 1.875rem;
-	}
-</style>

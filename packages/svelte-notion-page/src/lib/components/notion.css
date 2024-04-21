@@ -540,7 +540,8 @@
 		display: flex;
 		align-items: flex-start;
 	}
-	.notion-list-marker {
+
+	.notion-list-bulleted .notion-list-marker {
 		user-select: none;
 		width: 24px;
 		flex-shrink: 0;
@@ -554,9 +555,11 @@
 
 	.notion-callout {
 		padding: 16px 16px 16px 12px;
-		margin-top: 4px;
-		margin-bottom: 4px;
 		border-radius: 3px;
+	}
+
+	.notion .notion-callout {
+		margin-block: 4px;
 	}
 
 	.notion-callout-outline {
@@ -631,9 +634,90 @@
 		}
 	}
 
-	.notion-hr {
-		margin: 6px 0;
+	.notion .notion-hr {
+		margin-block: 6px;
 		padding: 0;
 		border: none;
 		border-top: 1px solid var(--fg-color-1);
+	}
+
+	.notion-equation {
+		position: relative;
+		display: inline-flex;
+		color: inherit;
+		fill: inherit;
+		user-select: none;
+		border-radius: 3px;
+		transition: background 20ms ease-in 0s;
+	}
+
+	.notion-equation-block {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+		overflow: auto;
+		padding: 16px 8px;
+		cursor: pointer;
+	}
+
+	.notion .notion-equation-block {
+		margin-block: 2px;
+	}
+
+	.notion-equation:hover {
+		background: var(--bg-color-0);
+	}
+
+	.notion-equation:active,
+	.notion-equation:focus {
+		background: var(--select-color-2);
+	}
+
+	.notion .notion-toggle-h1 {
+		margin-bottom: 2px;
+	}
+
+	.notion .notion-h1:not(:last-child) {
+		margin-bottom: 2px;
+	}
+
+	.notion	.notion-h1:not(:first-child) {
+		margin-top: 2.025rem;
+	}
+
+	.notion-h1-content {
+		font-size: 1.875rem;
+	}
+
+	.notion-body {
+		width: 100%;
+		max-width: var(--notion-max-width);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px 4px;
+	}
+
+	.notion-block.notion-h2:not(:last-child) {
+		margin-bottom: 2px;
+	}
+
+	.notion-block.notion-h2:not(:first-child) {
+		margin-top: 1.62rem;
+	}
+
+	.notion-h2-content {
+		font-size: 1.5rem;
+	}
+
+	.notion-block.notion-h3:not(:last-child) {
+		margin-bottom: 2px;
+	}
+
+	.notion-block.notion-h3:not(:first-child) {
+		margin-top: 1.25rem;
+	}
+
+	.notion-h3-content {
+		font-size: 1.25rem;
 	}

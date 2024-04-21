@@ -33,17 +33,3 @@
 		</h2>
 	{/if}
 </div>
-
-<style>
-	.notion-h2:not(:last-child) {
-		margin-bottom: 2px;
-	}
-
-	.notion-h2:not(:first-child) {
-		margin-top: 1.62rem;
-	}
-
-	.notion-h2-content {
-		font-size: 1.5rem;
-	}
-</style>

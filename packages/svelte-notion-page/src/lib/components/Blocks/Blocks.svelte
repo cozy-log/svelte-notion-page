@@ -53,4 +53,6 @@
 	}
 </script>
 
-<RecursiveBlocks blocks={contextedBlocks} />
+<div style="display: contents;">
+	<RecursiveBlocks blocks={contextedBlocks} />
+</div>

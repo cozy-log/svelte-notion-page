@@ -20,35 +20,3 @@
 <div class="notion-block notion-equation notion-equation-block">
 	{@html renderEquation(expression)}
 </div>
-
-<style>
-	.notion-equation {
-		position: relative;
-		display: inline-flex;
-		color: inherit;
-		fill: inherit;
-		user-select: none;
-		border-radius: 3px;
-		transition: background 20ms ease-in 0s;
-	}
-
-	.notion-equation-block {
-		display: flex;
-		flex-direction: column;
-		justify-items: center;
-		align-items: center;
-		overflow: auto;
-		padding: 16px 8px;
-		margin: 2px 0;
-		cursor: pointer;
-	}
-
-	.notion-equation:hover {
-		background: var(--bg-color-0);
-	}
-
-	.notion-equation:active,
-	.notion-equation:focus {
-		background: var(--select-color-2);
-	}
-</style>
