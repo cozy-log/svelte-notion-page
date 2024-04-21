@@ -169,6 +169,7 @@
 			return;
 		}
 	};
+	console.log(opened);
 </script>
 
 <svelte:window on:keydown={handleKeyDownOnOpened} />

@@ -8,11 +8,11 @@
 	const { image } = props;
 	const { type, caption } = image;
 	export let convertUrl: (url: string) => string = (url) => url;
-	let opened = false;
 	const url = getImgUrlOrNull(props);
 	let urls: string[] = url ? [url] : [];
 	let initialIndex = 0;
 	let urlLoaded = false;
+	let opened = false;
 	$: {
 		// lazy load
 		opened && !urlLoaded && loadImageUrlsEffect();
