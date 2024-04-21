@@ -21,28 +21,4 @@
 </span>
 
 <style>
-	.notion-equation {
-		position: relative;
-		display: inline-flex;
-		color: inherit;
-		fill: inherit;
-		user-select: none;
-		border-radius: 3px;
-		transition: background 20ms ease-in 0s;
-	}
-
-	.notion-equation-inline {
-		-webkit-user-select: all;
-		-moz-user-select: all;
-		user-select: all;
-	}
-
-	.notion-equation:hover {
-		background: var(--bg-color-0);
-	}
-
-	.notion-equation:active,
-	.notion-equation:focus {
-		background: var(--select-color-2);
-	}
 </style>

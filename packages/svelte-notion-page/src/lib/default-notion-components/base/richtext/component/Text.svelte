@@ -41,36 +41,4 @@
 {@html text}
 
 <style global>
-	:global(.notion-inline-code) {
-		color: #eb5757;
-		padding: 0.2em 0.4em;
-		background: var(--bg-color-2);
-		border-radius: 3px;
-		font-size: 85%;
-		font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-	}
-
-	:global(.notion-inline-underscore) {
-		text-decoration: underline;
-	}
-
-	:global(.notion-link) {
-		color: inherit;
-		word-break: break-word;
-		text-decoration: inherit;
-		border-bottom: 0.05em solid;
-		border-color: var(--fg-color-2);
-		opacity: 0.7;
-		transition: border-color 100ms ease-in, opacity 100ms ease-in;
-	}
-
-	:global(.notion-link:hover) {
-		border-color: var(--fg-color-6);
-		opacity: 1;
-	}
-
-	:global(.notion-span) {
-		word-break: break-all;
-		white-space: pre-wrap;
-	}
 </style>
