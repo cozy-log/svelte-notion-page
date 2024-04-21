@@ -634,7 +634,7 @@
 		}
 	}
 
-	.notion .notion-hr {
+	.notion-block.notion-hr {
 		margin-block: 6px;
 		padding: 0;
 		border: none;
@@ -661,7 +661,7 @@
 		cursor: pointer;
 	}
 
-	.notion .notion-equation-block {
+	.notion-block.notion-equation-block {
 		margin-block: 2px;
 	}
 
@@ -674,15 +674,15 @@
 		background: var(--select-color-2);
 	}
 
-	.notion .notion-toggle-h1 {
+	.notion-block.notion-toggle-h1 {
 		margin-bottom: 2px;
 	}
 
-	.notion .notion-h1:not(:last-child) {
+	.notion-block.notion-h1:not(:last-child) {
 		margin-bottom: 2px;
 	}
 
-	.notion	.notion-h1:not(:first-child) {
+	.notion-block.notion-h1:not(:first-child) {
 		margin-top: 2.025rem;
 	}
 
@@ -773,7 +773,7 @@
 		font-size: 1em;
 	}
 
-	.notion .notion-quote {
+	.notion-block.notion-quote {
 		margin: 3px 0px 3px 1px;
 	}
 
@@ -840,11 +840,11 @@
 		padding: 3px 2px;
 	}
 
-	.notion .notion-video:not(:last-child) {
+	.notion-block.notion-video:not(:last-child) {
 		margin-bottom: 4px;
 	}
 
-	.notion .notion-video:not(:first-child) {
+	.notion-block.notion-video:not(:first-child) {
 		margin-top: 4px;
 	}
 
@@ -857,4 +857,53 @@
 		width: 100%;
 		border-radius: 2px;
 		margin: 0 auto;
+	}
+		.notion-property-checkbox {
+		width: 16px;
+		height: 16px;
+	}
+
+	.notion-property-checkbox-checked {
+		width: 16px;
+		height: 16px;
+		background: var(--select-color-0);
+	}
+
+	.notion-property-checkbox-checked svg {
+		position: relative;
+		display: block;
+		top: 1px;
+		left: 1px;
+		width: 14px;
+		height: 14px;
+		fill: #fff;
+	}
+
+	.notion-property-checkbox-unchecked {
+		width: 16px;
+		height: 16px;
+	}
+
+	.notion-property-checkbox-unchecked svg {
+		fill: var(--fg-color);
+	}
+
+	.notion-image img {
+		width: 100%;
+		object-fit: contain;
+		pointer-events: auto;
+		cursor: default;
+	}
+
+	.notion-block.notion-image:not(:last-child) {
+		margin-bottom: 4px;
+	}
+
+	.notion-block.notion-image:not(:first-child) {
+		margin-top: 4px;
+	}
+
+	.notion-image-content {
+		display: flex;
+		flex-direction: column;
 	}

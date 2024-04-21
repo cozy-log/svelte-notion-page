@@ -74,23 +74,4 @@
 </figure>
 
 <style>
-	.notion-image img {
-		width: 100%;
-		object-fit: contain;
-		pointer-events: auto;
-		cursor: default;
-	}
-
-	.notion-image:not(:last-child) {
-		margin-bottom: 4px;
-	}
-
-	.notion-image:not(:first-child) {
-		margin-top: 4px;
-	}
-
-	.notion-image-content {
-		display: flex;
-		flex-direction: column;
-	}
 </style>
