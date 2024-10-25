@@ -12,3 +12,5 @@ vite.config.ts.timestamp-*
 /packages/*/package
 packages/svelte-notion-page/build-storybook.log
 .vscode/settings.json
+
+package

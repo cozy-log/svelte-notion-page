@@ -183,7 +183,7 @@
 		aria-modal="true"
 		on:mousemove={handleHideCursorOnMouseStop}
 		use:focusAction={opened}
-		transition:fade={{ duration: 200 }}
+		transition:fade|global={{ duration: 200 }}
 		class:hide-cursor={!cursorVisible}
 		class="notion-viewer-container"
 	>
