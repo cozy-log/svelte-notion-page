@@ -22,15 +22,17 @@ const viewports = {
 	}
 };
 
-export const parameters = {
-	actions: { argTypesRegex: '^on[A-Z].*' },
-	controls: {
-		matchers: {
-			color: /(background|color)$/i,
-			date: /Date$/
-		}
-	},
-	viewport: {
+/** @type { import('@storybook/svelte').Preview } */
+const preview = {
+	parameters: {
+		controls: {
+			matchers: {
+				color: /(background|color)$/i,
+				date: /Date$/i,
+			},
+		},
 		viewports
-	}
+	},
 };
+
+export default preview;

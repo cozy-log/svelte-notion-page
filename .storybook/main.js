@@ -1,19 +1,19 @@
-const path = require('path');
-module.exports = {
+/** @type { import('@storybook/sveltekit').StorybookConfig } */
+const config = {
   "stories": [
     "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/**/*.stories.@(js|ts|svelte)"
   ],
   "addons": [
+    "@storybook/addon-svelte-csf",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@chromatic-com/storybook",
     "@storybook/addon-interactions"
   ],
   "framework": {
     "name": "@storybook/sveltekit",
     "options": {}
-  },
-  "docs": {
-    "autodocs": "tag"
   }
-}
+};
+export default config;

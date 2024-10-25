@@ -1,0 +1,11 @@
+import Body from './Body.svelte';
+import Cover from './Cover.svelte';
+import Title from './Title.svelte';
+import Blocks from './Blocks';
+import _Notion from './Notion.svelte';
+export const Notion = _Notion;
+Notion.Blocks = Blocks;
+Notion.Title = Title;
+Notion.Body = Body;
+Notion.Cover = Cover;
+export default Notion;
