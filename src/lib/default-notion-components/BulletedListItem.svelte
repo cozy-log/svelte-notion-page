@@ -4,7 +4,12 @@
 	import { bulletedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: BulletedListItemArgs;
+	interface Props {
+		props: BulletedListItemArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 
 	const {
 		bulleted_list_item: { color, rich_text: texts }
@@ -20,7 +25,7 @@
 				<RichText props={texts} />
 			</p>
 		</div>
-		<slot />
+		{@render children?.()}
 	</li>
 </ul>
 

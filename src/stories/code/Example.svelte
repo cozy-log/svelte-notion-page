@@ -1,8 +1,12 @@
 <script lang="ts">
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
-	export let content: Content;
-	export let title = 'Notion Title';
+	interface Props {
+		content: Content;
+		title?: string;
+	}
+
+	let { content, title = 'Notion Title' }: Props = $props();
 </script>
 
 <Notion>

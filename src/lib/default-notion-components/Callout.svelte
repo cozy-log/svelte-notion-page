@@ -2,7 +2,12 @@
 	import type { CalloutArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: CalloutArgs;
+	interface Props {
+		props: CalloutArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		callout: { color, rich_text: texts, icon }
 	} = props;
@@ -21,7 +26,7 @@
 			{:else if icon.type === 'file' && icon.file != null}
 				<img alt="callout-icon" src={icon.file.url} />
 			{:else}
-				<span />
+				<span></span>
 			{/if}
 		</div>
 		<p class="notion-callout-text">
@@ -29,7 +34,7 @@
 		</p>
 	</div>
 
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

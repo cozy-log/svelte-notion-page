@@ -1,8 +1,12 @@
 <script lang="ts">
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
-	export let content: Content;
-	export let theme: 'light' | 'dark' = 'light';
+	interface Props {
+		content: Content;
+		theme?: 'light' | 'dark';
+	}
+
+	let { content, theme = 'light' }: Props = $props();
 </script>
 
 <div style="background-color: {theme === 'light' ? 'white' : 'black'};" data-theme={theme}>

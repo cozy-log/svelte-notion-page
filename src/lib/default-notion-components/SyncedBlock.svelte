@@ -1,10 +1,15 @@
 <script lang="ts">
 	import type { SyncedBlockArgs } from '$lib/types';
-	export let props: SyncedBlockArgs;
+	interface Props {
+		props: SyncedBlockArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 </script>
 
 <div class="notion-block notion-synced-block">
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

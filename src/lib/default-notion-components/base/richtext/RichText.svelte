@@ -2,7 +2,11 @@
 	import type { TextArgs } from '$lib/types';
 	import Text from './component/Text.svelte';
 	import Equation from './component/Equation.svelte';
-	export let props: TextArgs[];
+	interface Props {
+		props: TextArgs[];
+	}
+
+	let { props }: Props = $props();
 	const configs = {
 		text: Text,
 		equation: Equation
@@ -11,7 +15,8 @@
 
 {#if props.length !== 0}
 	{#each props as text}
-		<svelte:component this={configs[text.type]} props={text} />
+		{@const SvelteComponent = configs[text.type]}
+		<SvelteComponent props={text} />
 	{/each}
 {:else}
 	&nbsp

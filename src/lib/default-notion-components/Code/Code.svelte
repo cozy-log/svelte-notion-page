@@ -15,7 +15,11 @@
 	import loadSql from './support-language/sql';
 	import loadTypescript from './support-language/typescript';
 
-	export let props: CodeArgs;
+	interface Props {
+		props: CodeArgs;
+	}
+
+	let { props }: Props = $props();
 
 	/*
 	prismjs가 기본적으로 지원하는 언어: 
@@ -38,8 +42,8 @@
 		code: { caption, rich_text: texts, language }
 	} = props;
 
-	let copied = false;
-	$: content = texts.map(({ plain_text }) => plain_text).join('');
+	let copied = $state(false);
+	let content = $derived(texts.map(({ plain_text }) => plain_text).join(''));
 
 	let copyTimeout: NodeJS.Timeout | null = null;
 	const handleCopy = () => {
@@ -62,7 +66,7 @@
 			<div class="notion-code-language">
 				{language.replace(/^[a-z]/, (char) => char.toUpperCase())}
 			</div>
-			<button class="notion-code-copy" on:click={handleCopy}>
+			<button class="notion-code-copy" onclick={handleCopy}>
 				<svg
 					stroke="currentColor"
 					stroke-width="0"

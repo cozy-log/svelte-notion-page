@@ -2,7 +2,11 @@
 	import type { AudioArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: AudioArgs;
+	interface Props {
+		props: AudioArgs;
+	}
+
+	let { props }: Props = $props();
 	const {
 		audio: { type, file, external, caption }
 	} = props;
@@ -11,8 +15,8 @@
 <div class="notion-block notion-audio">
 	<div class="notion-audio-content">
 		{#if type === 'file' && file != null}
-			<!-- svelte-ignore a11y-media-has-caption -->
-			<audio controls preload="none" src={file.url} />
+			<!-- svelte-ignore a11y_media_has_caption -->
+			<audio controls preload="none" src={file.url}></audio>
 		{:else if type === 'external' && external != null}
 			unsupported embeded audio
 		{:else}

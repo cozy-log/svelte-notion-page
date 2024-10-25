@@ -3,7 +3,12 @@
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: QuoteArgs;
+	interface Props {
+		props: QuoteArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		quote: { color, rich_text: texts }
 	} = props;
@@ -14,7 +19,7 @@
 		<p>
 			<RichText props={texts} />
 		</p>
-		<slot />
+		{@render children?.()}
 	</div>
 </div>
 

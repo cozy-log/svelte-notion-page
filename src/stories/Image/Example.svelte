@@ -2,7 +2,7 @@
 	import { json } from './notion-export';
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
-	export let content = json as unknown as Content;
+	let { content = json as unknown as Content } = $props();
 </script>
 
 <Notion>

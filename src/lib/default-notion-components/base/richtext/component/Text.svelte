@@ -2,7 +2,11 @@
 	import type { TextArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import he from 'he';
-	export let props: TextArgs;
+	interface Props {
+		props: TextArgs;
+	}
+
+	let { props }: Props = $props();
 	const {
 		href,
 		text: { content },

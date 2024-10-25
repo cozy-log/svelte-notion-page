@@ -3,7 +3,12 @@
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
 	import CheckBox from './base/CheckBox.svelte';
-	export let props: TodoArgs;
+	interface Props {
+		props: TodoArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 
 	const {
 		to_do: { color, rich_text: texts, checked }
@@ -19,7 +24,7 @@
 			<RichText props={texts} />
 		</p>
 	</div>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

@@ -1,22 +1,30 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import type { ImageArgs, ContextedBlock } from '$lib/types';
 	import RichText from '../base/richtext/RichText.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 
-	export let style = '';
-	export let props: ImageArgs;
 	const { image } = props;
 	const { type, caption } = image;
-	export let convertUrl: (url: string) => string = (url) => url;
-	let opened = false;
-	const url = getImgUrlOrNull(props);
-	let urls: string[] = url ? [url] : [];
-	let initialIndex = 0;
-	let urlLoaded = false;
-	$: {
-		// lazy load
-		opened && !urlLoaded && loadImageUrlsEffect();
+	interface Props {
+		style?: string;
+		props: ImageArgs;
+		convertUrl?: (url: string) => string;
+		children?: import('svelte').Snippet;
 	}
+
+	let {
+		style = '',
+		props,
+		convertUrl = (url) => url,
+		children
+	}: Props = $props();
+	let opened = $state(false);
+	const url = getImgUrlOrNull(props);
+	let urls: string[] = $state(url ? [url] : []);
+	let initialIndex = $state(0);
+	let urlLoaded = $state(false);
 
 	function loadImageUrlsEffect() {
 		if (!url) return;
@@ -52,15 +60,19 @@
 			image.type === 'file' ? image.file : type === 'external' ? image.external : { url: null };
 		return url && convertUrl(url);
 	}
+	run(() => {
+		// lazy load
+		opened && !urlLoaded && loadImageUrlsEffect();
+	});
 </script>
 
 <figure {style} class="notion-block notion-image">
 	<div class="notion-image-content">
 		{#if url}
 			<ImageViewer bind:opened {initialIndex} {urls}>
-				<slot>
+				{#if children}{@render children()}{:else}
 					<img src={url} alt="posting img" />
-				</slot>
+				{/if}
 			</ImageViewer>
 		{:else}
 			unsupported type: ${type}

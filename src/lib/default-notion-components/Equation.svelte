@@ -2,7 +2,11 @@
 	import type { EquationArgs } from '$lib/types';
 	import renderEquation from '$lib/utils/renderEquation';
 
-	export let props: EquationArgs;
+	interface Props {
+		props: EquationArgs;
+	}
+
+	let { props }: Props = $props();
 	const {
 		equation: { expression }
 	} = props;

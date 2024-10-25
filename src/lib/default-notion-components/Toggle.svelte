@@ -2,11 +2,16 @@
 	import type { ToggleArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: ToggleArgs;
+	interface Props {
+		props: ToggleArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		toggle: { color, rich_text: texts }
 	} = props;
-	let open = false;
+	let open = $state(false);
 </script>
 
 <div
@@ -15,14 +20,14 @@
 	class={`${getColorCss(color)} notion-block notion-h1 notion-toggle`}
 >
 	<div class="notion-toggle-content">
-		<button on:click={() => (open = !open)} class="notion-toggle-button">
-			<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow" />
+		<button onclick={() => (open = !open)} class="notion-toggle-button">
+			<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow"></div>
 		</button>
 		<p>
 			<RichText props={texts} />
 		</p>
 	</div>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

@@ -1,21 +1,31 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { fade } from 'svelte/transition';
 	import { focusAction, tooltipAction } from 'svelte-legos';
 	import { tick } from 'svelte';
 	import Icon from './assets';
-	export let initialIndex: number;
-	export let opened = false;
-	export let urls: string[];
+	interface Props {
+		initialIndex: number;
+		opened?: boolean;
+		urls: string[];
+		children?: import('svelte').Snippet;
+	}
 
-	$: imgIndex = initialIndex;
-	$: [hasPrevious, hasNext] = [imgIndex > 0, imgIndex < urls.length - 1];
+	let {
+		initialIndex,
+		opened = $bindable(false),
+		urls,
+		children
+	}: Props = $props();
+
 	const scaleOriginCenter = { x: 0.5, y: 0.5 };
-	let url = urls[imgIndex];
-	let cursorVisible = false;
+	let url = $state(urls[imgIndex]);
+	let cursorVisible = $state(false);
 	let cursorTimeout: ReturnType<typeof setTimeout>;
-	let scale = 1;
-	let scaleOrigin = scaleOriginCenter;
-	let scaleInputFocused = false;
+	let scale = $state(1);
+	let scaleOrigin = $state(scaleOriginCenter);
+	let scaleInputFocused = $state(false);
 
 	async function toNextImage() {
 		await tick();
@@ -110,14 +120,6 @@
 		}
 	}
 
-	$: {
-		[opened];
-		onExitEffect();
-	}
-	$: {
-		[scale];
-		scaleUnderOneEffect();
-	}
 	function scaleUnderOneEffect() {
 		if (scale < 1) {
 			scaleOrigin = scaleOriginCenter;
@@ -131,10 +133,6 @@
 		}
 	}
 
-	$: {
-		[imgIndex];
-		imgIndexChangeEffect();
-	}
 	function imgIndexChangeEffect() {
 		scale = 1;
 		url = urls[imgIndex];
@@ -169,25 +167,42 @@
 			return;
 		}
 	};
+	let imgIndex;
+	run(() => {
+		imgIndex = initialIndex;
+	});
+	let [hasPrevious, hasNext] = $derived([imgIndex > 0, imgIndex < urls.length - 1]);
+	run(() => {
+		[opened];
+		onExitEffect();
+	});
+	run(() => {
+		[scale];
+		scaleUnderOneEffect();
+	});
+	run(() => {
+		[imgIndex];
+		imgIndexChangeEffect();
+	});
 </script>
 
-<svelte:window on:keydown={handleKeyDownOnOpened} />
+<svelte:window onkeydown={handleKeyDownOnOpened} />
 
-<button aria-haspopup="dialog" class="notion-viewer-opener" on:click={() => (opened = true)}>
-	<slot />
+<button aria-haspopup="dialog" class="notion-viewer-opener" onclick={() => (opened = true)}>
+	{@render children?.()}
 </button>
 
 {#if opened}
 	<div
 		role="dialog"
 		aria-modal="true"
-		on:mousemove={handleHideCursorOnMouseStop}
+		onmousemove={handleHideCursorOnMouseStop}
 		use:focusAction={opened}
 		transition:fade|global={{ duration: 200 }}
 		class:hide-cursor={!cursorVisible}
 		class="notion-viewer-container"
 	>
-		<button on:click={() => (opened = false)} class="notion-viewer-overlay" />
+		<button onclick={() => (opened = false)} class="notion-viewer-overlay"></button>
 		{#key url}
 			<img
 				use:zoomInOutActionOnClick
@@ -208,7 +223,7 @@
 						placement: 'left'
 					}}
 					aria-label="previous"
-					on:click={toPreviousImage}
+					onclick={toPreviousImage}
 					class:disabled={!hasPrevious}
 				>
 					<img src={Icon.ArrowBack} alt="arrow_back" />
@@ -220,7 +235,7 @@
 						pointer: false,
 						placement: 'left'
 					}}
-					on:click={toNextImage}
+					onclick={toNextImage}
 					class:disabled={!hasNext}
 				>
 					<img src={Icon.ArrowForward} alt="arrow_forward" />
@@ -231,7 +246,7 @@
 					use:tooltipAction={{ content: '축소 -', placement: 'left' }}
 					aria-label="scale-down"
 					class:disabled={scale <= 0.5}
-					on:click={scaleDown}
+					onclick={scaleDown}
 				>
 					<img src={Icon.Minus} alt="minus" />
 				</button>
@@ -250,7 +265,7 @@
 					</div>
 				{:else}
 					<button
-						on:click={() => (scaleInputFocused = true)}
+						onclick={() => (scaleInputFocused = true)}
 						class="scaler-input"
 						id="scaler-input"
 					>
@@ -261,7 +276,7 @@
 					aria-label="scale-up"
 					use:tooltipAction={{ content: '확대 +', placement: 'left', pointer: false }}
 					class:disabled={scale >= 2}
-					on:click={scaleUp}
+					onclick={scaleUp}
 				>
 					<img src={Icon.Plus} alt="plus" />
 				</button>
@@ -270,7 +285,7 @@
 				use:tooltipAction={{ content: '다운로드', placement: 'left', pointer: false }}
 				class="download"
 				aria-label="download"
-				on:click={handleDownloadLoading}
+				onclick={handleDownloadLoading}
 			>
 				<img src={Icon.Download} alt="download" />
 			</button>
@@ -278,7 +293,7 @@
 				aria-label="close"
 				use:tooltipAction={{ content: '닫기 esc', placement: 'left', pointer: false }}
 				class="close"
-				on:click={() => (opened = false)}
+				onclick={() => (opened = false)}
 			>
 				<img src={Icon.Close} alt="close" />
 			</button>

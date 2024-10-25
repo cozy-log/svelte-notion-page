@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { Block } from '../types';
 
-	export let block: Block;
+	interface Props {
+		block: Block;
+		children?: import('svelte').Snippet;
+	}
+
+	let { block, children }: Props = $props();
 
 	console.warn(`Fail to resolve ${block?.type}`);
 </script>
@@ -9,7 +14,7 @@
 <div>
 	⚠️ Not implemented type
 	<div>
-		<slot />
+		{@render children?.()}
 	</div>
 </div>
 <!-- {@debug block} -->

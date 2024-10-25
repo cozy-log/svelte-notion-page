@@ -1,5 +1,9 @@
 <script lang="ts">
-  export let title = ''
+	interface Props {
+		title?: string;
+	}
+
+	let { title = '' }: Props = $props();
 </script>
 
 <h1 class="notion-title">

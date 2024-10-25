@@ -3,7 +3,11 @@
 	import type { Content } from '$lib/types.js';
 	import Notion from '$lib/components';
 	const content = json as unknown as Content;
-	export let theme: 'light' | 'dark' = 'light';
+	interface Props {
+		theme?: 'light' | 'dark';
+	}
+
+	let { theme = 'light' }: Props = $props();
 </script>
 
 <div style="background-color: {theme === 'light' ? 'white' : 'black'};" data-theme={theme}>

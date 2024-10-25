@@ -1,14 +1,20 @@
 <script lang="ts">
+	import RecursiveBlocks from './RecursiveBlocks.svelte';
 	import type { ContextedBlock } from '../../types';
 	import { notionComponentProviderContext } from '../../context';
-	export let blocks: ContextedBlock[];
+	interface Props {
+		blocks: ContextedBlock[];
+	}
+
+	let { blocks }: Props = $props();
 	const componentProvider = notionComponentProviderContext.get();
 </script>
 
 {#each blocks as block (block.id)}
-	<svelte:component this={componentProvider.resolve(block.type)} props={block}>
+	{@const SvelteComponent = componentProvider.resolve(block.type)}
+	<SvelteComponent props={block}>
 		{#if block.has_children === true}
-			<svelte:self blocks={block.blocks} />
+			<RecursiveBlocks blocks={block.blocks} />
 		{/if}
-	</svelte:component>
+	</SvelteComponent>
 {/each}

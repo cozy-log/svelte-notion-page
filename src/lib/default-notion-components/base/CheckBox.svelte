@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let checked: boolean = false;
+	interface Props {
+		checked?: boolean;
+	}
+
+	let { checked = false }: Props = $props();
 </script>
 
 <div

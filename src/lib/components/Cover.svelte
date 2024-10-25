@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let src: string;
-	export let alt: string = 'notion cover';
+	interface Props {
+		src: string;
+		alt?: string;
+	}
+
+	let { src, alt = 'notion cover' }: Props = $props();
 </script>
 
 <div class="notion-cover-wrapper">

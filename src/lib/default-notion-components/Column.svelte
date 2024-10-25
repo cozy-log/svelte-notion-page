@@ -1,10 +1,15 @@
 <script lang="ts">
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <div class="notion-column">
-	<slot />
+	{@render children?.()}
 </div>
-<div class="notion-column-spacer" />
+<div class="notion-column-spacer"></div>
 
 <style>
 	.notion-column {

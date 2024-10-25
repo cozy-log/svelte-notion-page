@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { EquationArgs } from '$lib/types';
-	export let props: EquationArgs;
 	import renderEquation from '$lib/utils/renderEquation';
+	interface Props {
+		props: EquationArgs;
+	}
+
+	let { props }: Props = $props();
 	const {
 		equation: { expression }
 	} = props;

@@ -2,14 +2,20 @@
 	import type { Heading_2_Args } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: Heading_2_Args;
 	const {
 		heading_2: { color, rich_text: texts, is_toggleable }
 	} = props;
-	let open = false;
+	let open = $state(false);
 
-	// Give id to make it convenient to write TableOfContents
-	export let id = texts.map(({ plain_text }) => plain_text).join('');
+	
+	interface Props {
+		props: Heading_2_Args;
+		// Give id to make it convenient to write TableOfContents
+		id?: any;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, id = texts.map(({ plain_text }) => plain_text).join(''), children }: Props = $props();
 </script>
 
 <div
@@ -19,14 +25,14 @@
 >
 	{#if is_toggleable}
 		<div class="notion-toggle-content">
-			<button on:click={() => (open = !open)} class="notion-toggle-button">
-				<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow" />
+			<button onclick={() => (open = !open)} class="notion-toggle-button">
+				<div class:notion-toggle-button-arrow-opened={open} class="notion-toggle-button-arrow"></div>
 			</button>
 			<h2 class="notion-h-content notion-h2-content">
 				<RichText props={texts} />
 			</h2>
 		</div>
-		<slot />
+		{@render children?.()}
 	{:else}
 		<h2 class="notion-h-content notion-h2-content">
 			<RichText props={texts} />

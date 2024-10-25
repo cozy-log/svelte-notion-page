@@ -1,6 +1,10 @@
 <script lang="ts">
 	import Bookmark from '$lib/default-notion-components/Bookmark.svelte';
-	export let props: any;
+	interface Props {
+		props: any;
+	}
+
+	let { props }: Props = $props();
 	async function getMeta(url: string) {
 		if (url.includes('naver.com')) {
 			return {

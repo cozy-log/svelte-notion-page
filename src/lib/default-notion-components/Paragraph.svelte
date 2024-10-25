@@ -2,7 +2,12 @@
 	import type { ParagraphArgs } from '$lib/types';
 	import { getColorCss } from '$lib/utils/getColorCss';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: ParagraphArgs;
+	interface Props {
+		props: ParagraphArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		paragraph: { color, rich_text: texts }
 	} = props;
@@ -12,7 +17,7 @@
 	<p class="notion-paragraph-content">
 		<RichText props={texts} />
 	</p>
-	<slot />
+	{@render children?.()}
 </div>
 
 <style>

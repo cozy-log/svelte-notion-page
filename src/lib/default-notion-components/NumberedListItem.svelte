@@ -4,7 +4,12 @@
 	import { numberedListItemMarker } from '$lib/utils/listItemMarker';
 	import RichText from './base/richtext/RichText.svelte';
 
-	export let props: NumberedListItemArgs;
+	interface Props {
+		props: NumberedListItemArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		numbered_list_item: { rich_text: texts, color }
 	} = props;
@@ -22,7 +27,7 @@
 				<RichText props={texts} />
 			</p>
 		</div>
-		<slot />
+		{@render children?.()}
 	</li>
 </ol>
 

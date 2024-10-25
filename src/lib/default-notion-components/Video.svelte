@@ -3,7 +3,11 @@
 	import RichText from './base/richtext/RichText.svelte';
 	import { getYoutubeId } from '$lib/utils/getYoutubeId';
 
-	export let props: VideoArgs;
+	interface Props {
+		props: VideoArgs;
+	}
+
+	let { props }: Props = $props();
 	const {
 		video: { type, file, external, caption }
 	} = props;
@@ -12,10 +16,10 @@
 <div class="notion-block notion-video">
 	<div class="notion-video-content">
 		{#if type === 'file' && file != null}
-			<!-- svelte-ignore a11y-media-has-caption -->
-			<video playsInline controls preload="metadata" src={file.url} />
+			<!-- svelte-ignore a11y_media_has_caption -->
+			<video playsInline controls preload="metadata" src={file.url}></video>
 		{:else if type === 'external' && external != null}
-			<!-- svelte-ignore a11y-media-has-caption -->
+			<!-- svelte-ignore a11y_media_has_caption -->
 			{@const youtubeId = getYoutubeId(external.url)}
 
 			{#if youtubeId}
@@ -26,7 +30,7 @@
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowfullscreen
-				/>
+				></iframe>
 			{:else}
 				unsupported embeded video
 			{/if}

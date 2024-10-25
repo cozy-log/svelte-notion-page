@@ -1,6 +1,11 @@
 <script lang="ts">
 	import type { TableArgs } from '$lib/types';
-	export let props: TableArgs;
+	interface Props {
+		props: TableArgs;
+		children?: import('svelte').Snippet;
+	}
+
+	let { props, children }: Props = $props();
 	const {
 		table: { has_column_header, has_row_header }
 	} = props;
@@ -12,7 +17,7 @@
 		class:has-column-header={has_column_header}
 		class:has-row-header={has_row_header}
 	>
-		<slot />
+		{@render children?.()}
 	</tbody>
 </table>
 

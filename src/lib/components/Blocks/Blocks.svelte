@@ -1,7 +1,13 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import type { Block, ContextedBlock } from '$lib/types';
 	import RecursiveBlocks from './RecursiveBlocks.svelte';
-	export let blocks: Block[];
+	interface Props {
+		blocks: Block[];
+	}
+
+	let { blocks }: Props = $props();
 
 	function resolveToContextedBlock(
 		block: Block,
@@ -43,14 +49,14 @@
 		});
 		return contextedBlocks;
 	}
-	let contextedBlocks = resolveToContextedBlocks(blocks);
-	$: {
-		[blocks];
-		reactive();
-	}
+	let contextedBlocks = $state(resolveToContextedBlocks(blocks));
 	function reactive() {
 		contextedBlocks = resolveToContextedBlocks(blocks);
 	}
+	run(() => {
+		[blocks];
+		reactive();
+	});
 </script>
 
 <RecursiveBlocks blocks={contextedBlocks} />

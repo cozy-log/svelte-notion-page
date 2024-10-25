@@ -1,37 +1,43 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import type { BookmarkArgs } from '$lib/types';
 	import RichText from './base/richtext/RichText.svelte';
-	export let props: BookmarkArgs;
 	const {
 		bookmark: { url, caption }
 	} = props;
-	export let getMeta: (url: string) => Promise<{
+	interface Props {
+		props: BookmarkArgs;
+		getMeta?: (url: string) => Promise<{
 		title?: string;
 		description?: string;
 		image?: string;
 		favicon?: string;
-	}> = async (url: string) => {
+	}>;
+	}
+
+	let { props, getMeta = async (url: string) => {
 		return {
 			title: 'You must replace this component with something that have own getMeta method',
 			description: '',
 			image: '',
 			favicon: ''
 		};
-	};
-	let { title, description, image, favicon } = {
+	} }: Props = $props();
+	let { title, description, image, favicon } = $state({
 		title: '',
 		description: '',
 		image: '',
 		favicon: ''
-	};
-	$: {
+	});
+	run(() => {
 		getMeta(url).then((result) => {
 			title = result.title || '';
 			description = result.description || '';
 			image = result.image || '';
 			favicon = result.favicon || '';
 		});
-	}
+	});
 </script>
 
 <div class="notion-block notion-bookmark">

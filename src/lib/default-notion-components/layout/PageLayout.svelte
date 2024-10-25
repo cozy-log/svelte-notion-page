@@ -3,11 +3,16 @@
 	import Header from '$lib/default-notion-components/layout/Header.svelte';
 	import PageIcon from '$lib/default-notion-components/layout/PageIcon.svelte';
 	import type { Content } from '$lib/types';
-	export let content: Content;
+	interface Props {
+		content: Content;
+		children?: import('svelte').Snippet;
+	}
+
+	let { content, children }: Props = $props();
 </script>
 
 <div class="notion notion-app">
-	<div class="notion-viewport" />
+	<div class="notion-viewport"></div>
 	<div class="notion-frame">
 		{#if false}
 			<Header />
@@ -38,7 +43,7 @@
 					class:notion-page-content-has-toc={false}
 				>
 					<article class="notion-page-content-inner">
-						<slot />
+						{@render children?.()}
 					</article>
 
 					<!-- {hasAside && (
