@@ -14,3 +14,4 @@ packages/svelte-notion-page/build-storybook.log
 .vscode/settings.json
 
 package
+.svelte-kit
